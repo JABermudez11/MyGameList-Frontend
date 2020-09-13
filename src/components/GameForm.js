@@ -5,20 +5,25 @@ const GamesForm = () => {
         <form >
             <div>
                 <div>
-                    <label>Game Title:</label>
+                    <label>Title:</label>
                     <input type="text" name="title" />
                 </div>
 
                 <div>
-                    <label>Game Genre:</label>
+                    <label>Genre:</label>
                     <input type="text" name="genre" />
                 </div>
 
                 <div>
-                    <label>Game Rating:</label>
+                    <label>Rating:</label>
                     <input type="Number" name="rating" />
                 </div>
-                
+
+                <div>
+                    <label>Description:</label>
+                    <textarea name="desc" />
+                </div>
+
                 <input type="submit" value="submit" />
             </div>
         </form>
