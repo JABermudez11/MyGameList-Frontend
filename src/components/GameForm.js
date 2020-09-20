@@ -1,6 +1,8 @@
 import React from 'react'
 
-const GamesForm = () => {
+const GamesForm = (props) => {
+    const { handleSudmit, handleChange } = props;
+
     return(
         <form >
             <div>
