@@ -16,7 +16,7 @@ export default class Game extends Component {
     }
 
     handleChange = (e) => {
-
+        
     }
 
     render() {
