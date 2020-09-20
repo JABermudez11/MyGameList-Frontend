@@ -1,14 +1,25 @@
 import React from 'react';
-import AppContainer from './containers/AppContainer'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>MyGameList</h1>
-        <AppContainer />
-      </header>
-    </div>
+  return (    
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/games">Game</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </Router>
   );
 }
 
