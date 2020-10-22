@@ -4,19 +4,31 @@ import GameForm from '../components/GameForm'
 export default class Game extends Component {
 
     state = {
-        formClick: false
-    }
+        formClick: false,
+        title: "",
+        genre: "",
+        rating: "",
+        description: ""
+    }    
 
     handleClick = () =>{
         this.setState({ formClick: !this.state.formClick})
     }
 
     handleSubmit = (e) => {
+        e.preventDefault()
+
+        console.log("submitted bruh")
+        
 
     }
 
     handleChange = (e) => {
-        
+        // this.setState({
+        //     [e.target.name]: e.target.value
+        // })
+
+        console.log(e.target.name)
     }
 
     render() {

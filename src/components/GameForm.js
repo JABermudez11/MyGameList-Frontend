@@ -1,39 +1,34 @@
 import React from 'react'
 
 const GamesForm = (props) => {
-    const { handleSudmit, handleChange } = props;
 
-    state = {
-        title: "",
-        genre: "",
-        rating: "",
-        description: ""
-    }
+    const { handleSubmit, handleChange } = props;
+
 
     return(
         <form >
             <div>
                 <div>
                     <label>Title:</label>
-                    <input type="text" name="title" value="title" />
+                    <input type="text" name="title" onChange={handleChange} />
                 </div>
 
                 <div>
                     <label>Genre:</label>
-                    <input type="text" name="genre" value="genre" />
+                    <input type="text" name="genre" onChange={handleChange} />
                 </div>
 
                 <div>
                     <label>Rating:</label>
-                    <input type="Number" name="rating" value="rating" />
+                    <input type="Number" name="rating" onChange={handleChange} />
                 </div>
 
                 <div>
                     <label>Description:</label>
-                    <textarea name="desc" value="desc" />
+                    <textarea name="desc" onChange={handleChange} />
                 </div>
 
-                <input type="submit" value="submit" />
+                <input type="submit" value="submit" onSubmit={handleSubmit} />
             </div>
         </form>
     )
