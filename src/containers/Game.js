@@ -18,17 +18,36 @@ export default class Game extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
 
-        console.log("submitted bruh")
+        // post new games
+        fetch('http://localhost:4000/games', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            },
+            body: JSON.stringify({
+                title: this.state.title,
+                genre: this.state.genre,
+                rating: this.state.rating,
+                description: this.state.description
+            })
+        })
+        .then(response => response.json())
+        .then(response => console.log('submitted new game'))
+
+        // console.log('bopped')
+
+        
         
 
     }
 
     handleChange = (e) => {
-        // this.setState({
-        //     [e.target.name]: e.target.value
-        // })
+        this.setState({
+            [e.target.name]: e.target.value
+        })
 
-        console.log(e.target.name)
+        // console.log(e.target.name)
     }
 
     render() {

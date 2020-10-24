@@ -6,7 +6,7 @@ const GamesForm = (props) => {
 
 
     return(
-        <form >
+        <form onSubmit={handleSubmit} >
             <div>
                 <div>
                     <label>Title:</label>
@@ -28,7 +28,7 @@ const GamesForm = (props) => {
                     <textarea name="desc" onChange={handleChange} />
                 </div>
 
-                <input type="submit" value="submit" onSubmit={handleSubmit} />
+                <button type="submit">Submit</button>
             </div>
         </form>
     )
