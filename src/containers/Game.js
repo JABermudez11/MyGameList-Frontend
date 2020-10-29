@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GameForm from '../components/GameForm'
+import GameList from '../containers/GameLists'
 
 export default class Game extends Component {
 
@@ -33,21 +34,13 @@ export default class Game extends Component {
             })
         })
         .then(response => response.json())
-        .then(response => console.log('submitted new game'))
-
-        // console.log('bopped')
-
-        
-        
-
+        .then(response => console.log('submitted new game'))       
     }
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
-        })
-
-        // console.log(e.target.name)
+        })        
     }
 
     render() {
@@ -60,6 +53,8 @@ export default class Game extends Component {
                 handleSubmit={this.handleSubmit} 
                 handleChange={this.handleChange} /> : 
                 null }
+
+                <GameList />
             </div>
         )
     }
