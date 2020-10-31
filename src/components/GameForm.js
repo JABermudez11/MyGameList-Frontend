@@ -25,7 +25,7 @@ const GamesForm = (props) => {
 
                 <div>
                     <label>Description:</label>
-                    <textarea name="desc" onChange={handleChange} />
+                    <textarea name="description" onChange={handleChange} />
                 </div>
 
                 <button type="submit">Submit</button>

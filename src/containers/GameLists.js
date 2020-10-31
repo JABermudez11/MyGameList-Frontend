@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import GameCard from '../components/GameCard'
 
 export default class GameLists extends Component {
 
@@ -12,6 +13,12 @@ export default class GameLists extends Component {
         })
         .then(res => res.json())
         .then(data => console.log(data))
+    }
+
+    renderGames = (games) => {
+        if (games.length !== 0 ) {
+            // games.map()
+        }
     }
 
     render() {
