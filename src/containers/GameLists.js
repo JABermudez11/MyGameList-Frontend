@@ -8,9 +8,7 @@ export default class GameLists extends Component {
         return (
             <div>
                 <h1>List of Games</h1>
-                {games.map(game => <GameCard game={game} />)}
-                                
-                {console.log(games)}
+                {games.map(game => <GameCard key={game._id} game={game} />)}                
             </div>
         )
     }

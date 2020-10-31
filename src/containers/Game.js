@@ -70,6 +70,7 @@ export default class Game extends Component {
                 null }
 
                 {/* <GameList games={this.state.games} /> */}
+                {this.state.games ? <GameList games={this.state.games} />: null}
             </div>
         )
     }
