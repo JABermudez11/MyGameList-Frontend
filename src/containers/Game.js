@@ -9,8 +9,22 @@ export default class Game extends Component {
         title: "",
         genre: "",
         rating: "",
-        description: ""
-    }    
+        description: "",
+        games: []
+    } 
+    
+    componentDidMount(){
+        fetch("http://localhost:4000/games", {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(games => this.setState({games}))
+
+    }
 
     handleClick = () =>{
         this.setState({ formClick: !this.state.formClick})
@@ -55,7 +69,7 @@ export default class Game extends Component {
                 handleChange={this.handleChange} /> : 
                 null }
 
-                <GameList />
+                {/* <GameList games={this.state.games} /> */}
             </div>
         )
     }
