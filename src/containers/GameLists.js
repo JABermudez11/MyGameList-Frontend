@@ -3,6 +3,10 @@ import GameCard from '../components/GameCard'
 
 export default class GameLists extends Component {
 
+    state = {
+        listOfGames: []
+    }
+
     componentDidMount(){
         fetch("http://localhost:4000/games", {
             method: "GET",
@@ -12,19 +16,15 @@ export default class GameLists extends Component {
             }
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(games => this.setState({listOfGames: games}))
+        
     }
-
-    renderGames = (games) => {
-        if (games.length !== 0 ) {
-            // games.map()
-        }
-    }
+        
 
     render() {
         return (
             <div>
-                <h1>List of Games</h1>
+                <h1>List of Games</h1>                
             </div>
         )
     }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
-export default class GameCard extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+const GameCard = (props) => {
+    
+    return (
+        <div>
+            <h1>{this.props.game.title}</h1>
+        </div>
+    )    
 }
+
+export default GameCard
