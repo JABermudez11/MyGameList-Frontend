@@ -69,8 +69,7 @@ export default class Game extends Component {
                 handleChange={this.handleChange} /> : 
                 null }
 
-                {/* <GameList games={this.state.games} /> */}
-                {this.state.games ? <GameList games={this.state.games} />: null}
+                <GameList games={this.state.games} />                
             </div>
         )
     }
