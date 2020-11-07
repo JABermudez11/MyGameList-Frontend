@@ -58,6 +58,11 @@ export default class Game extends Component {
         console.log(e.target.name)
     }
 
+    deleteGame = (gameId) => {
+        // fetch('http://localhost:4000/games', {
+        console.log(gameId)
+    }
+
     render() {
         return (
             <div>
@@ -69,7 +74,7 @@ export default class Game extends Component {
                 handleChange={this.handleChange} /> : 
                 null }
 
-                <GameList games={this.state.games} />                
+                <GameList games={this.state.games} deleteGame={this.deleteGame} />                
             </div>
         )
     }
