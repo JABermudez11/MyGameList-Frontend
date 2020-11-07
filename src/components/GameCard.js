@@ -6,7 +6,7 @@ const GameCard = (props) => {
         <div>
             {console.log(props)}
             <h1>{props.game.title}</h1>
-            
+            <p>{props.game.description}</p>
         </div>
     )    
 }
