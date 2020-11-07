@@ -59,8 +59,13 @@ export default class Game extends Component {
     }
 
     deleteGame = (gameId) => {
-        // fetch('http://localhost:4000/games', {
-        console.log(gameId)
+        fetch(`http://localhost:4000/games/${gameId}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            }
+        })        
     }
 
     render() {
