@@ -5,10 +5,7 @@ export default class GameLists extends Component {
     
     
     render() {
-        // const { games } = this.props
-
-        // console.log(games)
-
+        
         return (
             <div>
                 <h1>List of Games</h1>

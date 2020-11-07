@@ -65,7 +65,12 @@ export default class Game extends Component {
                 'Content-Type': 'application/json',
                 Accept: 'application/json'
             }
-        })        
+        })   
+        
+        const currGames = this.state.games.filter(g => g._id !== gameId)
+        this.setState({
+            games: currGames
+        })
     }
 
     render() {
