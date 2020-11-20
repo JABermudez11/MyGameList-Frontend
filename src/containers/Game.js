@@ -4,7 +4,7 @@ import GameList from '../containers/GameLists'
 import {API_ROOT} from '../services/api'
 
 
-const gamesURL = `${API_ROOT}/games`
+const gamesURL = `${API_ROOT}games`
 
 export default class Game extends Component {
 
