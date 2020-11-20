@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import GameForm from '../components/GameForm'
 import GameList from '../containers/GameLists'
+import {API_ROOT} from '../services/api'
+
+
+const gamesURL = `${API_ROOT}/games`
 
 export default class Game extends Component {
 
@@ -14,7 +18,7 @@ export default class Game extends Component {
     } 
     
     componentDidMount(){
-        fetch("http://localhost:4000/games", {
+        fetch(gamesURL, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +38,7 @@ export default class Game extends Component {
         e.preventDefault()
 
         // post new games
-        fetch('http://localhost:4000/games', {
+        fetch(gamesURL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,13 +63,15 @@ export default class Game extends Component {
     }
 
     deleteGame = (gameId) => {
-        fetch(`http://localhost:4000/games/${gameId}`, {
+        fetch(`gamesURL/${gameId}`, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
                 Accept: 'application/json'
             }
-        })   
+        })
+        .then(res => res.json())   
+        .then(res => console.log("game deleted"))
         
         const currGames = this.state.games.filter(g => g._id !== gameId)
         this.setState({

@@ -6,7 +6,7 @@ import Home from './containers/Home'
 function App() {
   return (    
     <Router>
-      <div className="App">
+      <div className="App">        
         <nav>
           <ul>
             <li>
