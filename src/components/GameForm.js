@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { StyledContainerForm } from '../css/GameFormStyles'
+
 const GamesForm = (props) => {
 
     const { handleSubmit, handleChange } = props;
@@ -7,7 +9,7 @@ const GamesForm = (props) => {
 
     return(
         <form onSubmit={handleSubmit} >
-            <div>
+            <StyledContainerForm>
                 <div>
                     <label>Title:</label>
                     <input type="text" name="title" onChange={handleChange} />
@@ -29,7 +31,7 @@ const GamesForm = (props) => {
                 </div>
 
                 <button type="submit">Submit</button>
-            </div>
+            </StyledContainerForm>
         </form>
     )
 }
