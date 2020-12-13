@@ -6,3 +6,8 @@ export const GameCardStyles = styles.div`
     background-color: purple;
     border: 4px solid red;
 `;
+
+export const GameCardButton = styles.button`
+    background-color: green;
+    padding: 15px 32px;
+`;

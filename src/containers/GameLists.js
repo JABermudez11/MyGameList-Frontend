@@ -4,7 +4,6 @@ import { Container } from '../css/GameListsStyles'
 
 export default class GameLists extends Component {    
     
-    
     render() {
         
         return (

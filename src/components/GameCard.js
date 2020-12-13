@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GameCardStyles } from '../css/GameCardStyles';
+import { GameCardStyles, GameCardButton } from '../css/GameCardStyles';
 
 const GameCard = (props) => {
     
@@ -11,7 +11,7 @@ const GameCard = (props) => {
             <h4>Genre: {props.game.genre}</h4>
             <p>{props.game.description}</p>
             <p>Game submitted by: N/a</p>            
-            <button onClick={() => props.deleteGame(props.game._id)}>DELETE GAME</button>
+            <GameCardButton onClick={() => props.deleteGame(props.game._id)}>DELETE GAME</GameCardButton>
         </GameCardStyles>
     )    
 }
