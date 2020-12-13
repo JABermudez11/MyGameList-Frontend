@@ -5,6 +5,7 @@ export const GameCardStyles = styles.div`
     flex-direction: column;
     background-color: purple;
     border: 4px solid red;
+    justify-content: center;
 `;
 
 export const GameCardButton = styles.button`
